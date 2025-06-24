@@ -44,7 +44,7 @@ if st.button("Generate Samples"):
     cols = st.columns(5)
     for i, col in enumerate(cols):
         img = ToPILImage()(outputs[i])
-        col.image(img.resize((140, 140)), caption=f"Sample {i+1}", use_column_width=True)
+        col.image(img.resize((140, 140)), caption=f"Sample {i+1}", use_container_width=True)
 
 st.markdown("""
     <style>
