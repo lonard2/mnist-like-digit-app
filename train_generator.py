@@ -6,7 +6,7 @@ import os
 class Generator(nn.Module):
     def __init__(self, nz=100, num_classes=10, img_size=28):
         super().__init__()
-        self.label_embed = nn.Embedding(num_classes, nz)
+        self.label_emb = nn.Embedding(num_classes, nz)
         self.model = nn.Sequential(
             nn.Linear(nz, 256),
             nn.ReLU(True),
