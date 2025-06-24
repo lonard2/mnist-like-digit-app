@@ -17,7 +17,7 @@ class Generator(nn.Module):
         )
 
     def forward(self, z, labels):
-        embed = self.label_embed(labels)
+        embed = self.label_emb(labels)
         x = z * embed
         return self.model(x).view(-1, 1, 28, 28)
 
